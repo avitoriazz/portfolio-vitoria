@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitória Oliveira | Analista de Dados Autônoma</title>
+    <title>Vitória Oliveira | Analista de Dados</title>
     <style>
         /* Estilos Globais */
         body {
@@ -97,6 +97,18 @@
         .skill-card h4 { color: #00bfff; margin-bottom: 15px; font-size: 1.2rem; margin-top: 0; }
         .skill-card ul { color: #aaa; list-style: none; padding: 0; line-height: 1.8; font-size: 0.95rem; margin: 0; }
 
+        /* Estilo para os Cards de Projetos */
+        .project-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.15);
+            overflow: hidden;
+            text-align: left;
+            transition: 0.3s;
+        }
+        .project-card:hover { transform: translateY(-10px); border-color: #00bfff; }
+        .project-img-placeholder { background: #1a1a2e; height: 180px; display: flex; justify-content: center; align-items: center; font-size: 3rem; }
+
         @media (max-width: 900px) {
             .hero { flex-direction: column-reverse; text-align: center; padding-top: 100px; height: auto; padding-bottom: 50px; }
             .hero-img { width: 250px; height: 250px; }
@@ -157,14 +169,14 @@
 
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
            <div class="skill-card">
-            <h4>🔹 Análise de Dados</h4>
-            <ul>
-                <li>• Análise exploratória de dados (EDA)</li>
-                <li>• Identificação de padrões e tendências</li>
-                <li>• Storytelling com dados</li>
-                <li>• Análises para produtos financeiros</li>
-            </ul>
-        </div>
+                <h4>🔹 Análise de Dados</h4>
+                <ul>
+                    <li>• Análise exploratória de dados (EDA)</li>
+                    <li>• Identificação de padrões e tendências</li>
+                    <li>• Storytelling com dados</li>
+                    <li>• Análises para produtos financeiros</li>
+                </ul>
+            </div>
             <div class="skill-card">
                 <h4>🔹 Bancos de Dados & SQL</h4>
                 <ul>
@@ -186,24 +198,50 @@
         </div>
     </section>
 
+    <section id="projetos" style="padding: 100px 10%; background-color: #05050a; text-align: center; border-top: 1px solid rgba(138, 43, 226, 0.1);">
+        <h2 style="font-size: 2.5rem; color: #00bfff; margin-bottom: 20px;">Meus Projetos<span>.</span></h2>
+        <p style="color: #ccc; margin-bottom: 60px;">Confira alguns dos meus trabalhos recentes em análise de dados e visualização estratégica.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; justify-content: center;">
+            
+            <div class="project-card">
+                <div class="project-img-placeholder">📊</div>
+                <div style="padding: 25px;">
+                    <h4 style="color: #00bfff; margin-bottom: 10px;">Dashboard de Performance Financeira</h4>
+                    <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">Análise de KPIs de rentabilidade, fluxo de caixa e projeções de mercado utilizando Power BI e SQL.</p>
+                    <a href="https://github.com/avitoriazz" target="_blank" style="color: #8a2be2; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Ver Projeto →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img-placeholder">🐍</div>
+                <div style="padding: 25px;">
+                    <h4 style="color: #00bfff; margin-bottom: 10px;">Automação de Relatórios em Python</h4>
+                    <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">Script desenvolvido para limpeza e padronização de grandes volumes de dados (ETL) economizando 10h mensais.</p>
+                    <a href="https://github.com/avitoriazz" target="_blank" style="color: #8a2be2; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Ver no GitHub →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <section id="contato" style="padding: 100px 10%; background-color: #0a0a12; border-top: 1px solid rgba(138, 43, 226, 0.1);">
         <div style="text-align: center; margin-bottom: 60px;">
             <h2 style="font-size: 2.5rem; color: #00bfff; margin-bottom: 20px;">Contato Profissional<span>.</span></h2>
-            <p style="color: #ccc; max-width: 600px; margin: 0 auto;">Se você busca transformar os dados do seu negócio em estratégias claras, estou à disposição para ajudar.</p>
+            <p style="color: #ccc; max-width: 600px; margin: 0 auto;">Estou à disposição para colaborar em projetos de análise de dados e inteligência de negócio.</p>
         </div>
 
         <div style="display: flex; gap: 50px; flex-wrap: wrap; justify-content: center;">
             <div style="flex: 1; min-width: 320px; background: rgba(255, 255, 255, 0.02); padding: 40px; border-radius: 15px; border: 1px solid rgba(138, 43, 226, 0.15);">
-                
                 <form action="https://formspree.io/f/xykyklnq" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
                     <input type="text" name="name" placeholder="Seu Nome" required style="background: #05050a; border: 1px solid #333; padding: 15px; border-radius: 8px; color: white; outline: none;">
                     <input type="email" name="email" placeholder="Seu E-mail" required style="background: #05050a; border: 1px solid #333; padding: 15px; border-radius: 8px; color: white; outline: none;">
                     <textarea name="message" placeholder="Sua Mensagem" rows="5" required style="background: #05050a; border: 1px solid #333; padding: 15px; border-radius: 8px; color: white; outline: none; resize: none;"></textarea>
                     <button type="submit" style="background: linear-gradient(90deg, #8a2be2, #00bfff); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s;">Enviar Mensagem 🚀</button>
                 </form>
-
             </div>
         </div>
     </section>
+
 </body>
 </html>
