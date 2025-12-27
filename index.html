@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitória Oliveira | Analista de Dados Autônoma</title>
+    <style>
+        /* Estilos Globais */
+        body {
+            background-color: #05050a;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            margin: 0; padding: 0;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Menu Superior */
+        header {
+            position: fixed;
+            top: 0; width: 100%;
+            background: rgba(5, 5, 10, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: #00bfff; }
+
+        /* Seção Principal (Hero) */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            padding: 0 10%;
+            background: radial-gradient(circle at 50% 50%, rgba(75, 0, 130, 0.1) 0%, transparent 80%);
+        }
+
+        .hero-text { max-width: 550px; }
+        .hero-text h1 { font-size: 3.5rem; margin: 0; }
+        .hero-text h1 span { color: #00bfff; }
+        .hero-text .stack { color: #00bfff; font-weight: bold; margin-top: 15px; font-size: 1.1rem; }
+
+        .contact-info { margin-top: 20px; color: #ccc; font-size: 0.95rem; }
+        .contact-info p { margin: 5px 0; }
+        .contact-info span { color: #8a2be2; margin-right: 10px; }
+
+        /* Círculo da Foto */
+        .hero-img {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 4px solid #8a2be2;
+            box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-img img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Botões e Links Sociais */
+        .btn-container { display: flex; gap: 15px; margin-top: 30px; }
+        .btn { padding: 12px 25px; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; font-size: 0.9rem; }
+        .btn-contato { background: linear-gradient(90deg, #8a2be2, #00bfff); color: white; }
+        .btn-cv { border: 2px solid #8a2be2; color: white; }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(138, 43, 226, 0.4); }
+
+        .social-links { margin-top: 25px; display: flex; gap: 20px; }
+        .social-links a { color: #00bfff; text-decoration: none; font-weight: bold; border: 1px solid #1a1a2e; padding: 8px 15px; border-radius: 50%; transition: 0.3s; }
+        .social-links a:hover { background: #1a1a2e; color: white; }
+
+        /* Grid de Habilidades (Sobre) */
+        .skill-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.15);
+            transition: 0.3s;
+        }
+        .skill-card:hover { border-color: #00bfff; transform: translateY(-5px); }
+        .skill-card h4 { color: #00bfff; margin-bottom: 15px; font-size: 1.2rem; margin-top: 0; }
+        .skill-card ul { color: #aaa; list-style: none; padding: 0; line-height: 1.8; font-size: 0.95rem; margin: 0; }
+
+        @media (max-width: 900px) {
+            .hero { flex-direction: column-reverse; text-align: center; padding-top: 100px; height: auto; padding-bottom: 50px; }
+            .hero-img { width: 250px; height: 250px; }
+            .btn-container { justify-content: center; }
+            .social-links { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-text">
+            <p style="color: #a2a2ff; margin-bottom: 10px;">Olá, eu sou</p>
+            <h1>Vitória Oliveira<span>.</span></h1>
+            <p>Análise de dados para transformar informações em decisões claras e acionáveis, apoiando negócios com insights baseados em dados e visualizações eficientes.</p>
+            <p class="stack">SQL • Power BI • Excel • Python</p>
+            
+            <div class="contact-info">
+                <p></span> São Paulo, SP</p>
+                <p></span> contatovitoriaoliveira00@gmail.com</p>
+            </div>
+
+            <div class="btn-container">
+                <a href="https://wa.me/5511969731438" target="_blank" class="btn btn-contato">Entre em Contato</a>
+                <a href="curriculo.pdf" download class="btn btn-cv">Baixar CV</a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/vitoriaoliveiram?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">in</a>
+                <a href="https://github.com/avitoriazz" target="_blank">git</a>
+            </div>
+        </div>
+        
+        <div class="hero-img">
+            <img src="perfil.jpg" alt="Vitória Oliveira">
+        </div>
+    </section>
+
+    <section id="sobre" style="padding: 100px 10%; background-color: #0a0a12; border-top: 1px solid rgba(138, 43, 226, 0.1);">
+        <div style="text-align: center; max-width: 850px; margin: 0 auto 60px auto;">
+            <h2 style="font-size: 2.5rem; color: #00bfff; margin-bottom: 20px;">Sobre mim<span>.</span></h2>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #ccc;">
+            Ajudo empresas a organizar, analisar e visualizar dados para melhorar a tomada de decisão. 
+            Tenho experiência em análise de dados no <strong>setor financeiro</strong>, criando dashboards em <strong>Power BI</strong>, 
+            relatórios estratégicos e análises com <strong>SQL, Excel, Python e Databricks</strong>, 
+            sempre conectando dados ao resultado do negócio.
+        </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+            
+           <div class="skill-card">
+            <h4>🔹 Análise de Dados</h4>
+            <ul>
+                <li>• Análise exploratória de dados (EDA)</li>
+                <li>• Identificação de padrões e tendências</li>
+                <li>• Storytelling com dados</li>
+                <li>• Análises para produtos financeiros</li>
+            </ul>
+        </div>
+
+            <div class="skill-card">
+                <h4>🔹 Bancos de Dados & SQL</h4>
+                <ul>
+                    <li>• Consultas SQL (SELECT, JOIN, GROUP BY, WHERE)</li>
+                    <li>• Extração e manipulação de dados</li>
+                    <li>• Integração de múltiplas bases</li>
+                    <li>• Apoio a processos de ETL</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h4>🔹 Visualização de Dados</h4>
+                <ul>
+                    <li>• Power BI (dashboards interativos)</li>
+                    <li>• Relatórios gerenciais e financeiros</li>
+                    <li>• Data Visualization orientada ao negócio</li>
+                    <li>• Apresentações executivas</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h4>🔹 Big Data</h4>
+                <ul>
+                    <li>• Databricks</li>
+                    <li>• Tratamento e integração de dados</li>
+                    <li>• Ambiente analítico distribuído</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h4>🔹 Python & Excel</h4>
+                <ul>
+                    <li>• Automação simples de análises</li>
+                    <li>• Tabelas dinâmicas e fórmulas</li>
+                    <li>• Manipulação básica de dados</li>
+                    <li>• Organização e padronização</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+            <section id="projetos" style="padding: 100px 10%; background-color: #05050a; border-top: 1px solid rgba(138, 43, 226, 0.1);">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; color: #00bfff; margin-bottom: 20px;">Meus Projetos<span>.</span></h2>
+                <p style="color: #ccc;">Confira alguns dos meus trabalhos recentes em análise de dados e visualização estratégica.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                
+                <div style="background: rgba(255, 255, 255, 0.02); border-radius: 15px; border: 1px solid rgba(138, 43, 226, 0.15); overflow: hidden; transition: 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <div style="width: 100%; height: 200px; background-color: #1a1a2e; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #8a2be2; font-size: 3rem;">📊</span>
+                    </div>
+                    <div style="padding: 25px;">
+                        <h4 style="color: #00bfff; margin: 0 0 10px 0;">Dashboard de Performance Financeira</h4>
+                        <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">Análise de KPIs de rentabilidade, fluxo de caixa e projeções de mercado utilizando Power BI e SQL.</p>
+                        <div style="margin-top: 20px;">
+                            <a href="#" style="color: #8a2be2; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Ver Projeto →</a>
+                        </div>
+                    </div>
+                </div>
+
+            <div style="background: rgba(255, 255, 255, 0.02); border-radius: 15px; border: 1px solid rgba(138, 43, 226, 0.15); overflow: hidden; transition: 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="width: 100%; height: 200px; background-color: #1a1a2e; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: #00bfff; font-size: 3rem;">🐍</span>
+                </div>
+                <div style="padding: 25px;">
+                    <h4 style="color: #00bfff; margin: 0 0 10px 0;">Automação de Relatórios em Python</h4>
+                    <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">Script desenvolvido para limpeza e padronização de grandes volumes de dados (ETL) economizando 10h mensais.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" style="color: #8a2be2; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Ver no GitHub →</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+            <section id="contato" style="padding: 100px 10%; background-color: #0a0a12; border-top: 1px solid rgba(138, 43, 226, 0.1);">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-size: 2.5rem; color: #00bfff; margin-bottom: 20px;">Contato Profissional<span>.</span></h2>
+            <p style="color: #ccc; max-width: 600px; margin: 0 auto;">Se você busca transformar os dados do seu negócio em estratégias claras, estou à disposição para ajudar. Atuo de forma personalizada em cada projeto, garantindo que as soluções em Power BI, SQL e Python tragam resultados reais para sua tomada de decisão. Vamos conversar sobre como posso agregar valor ao seu próximo desafio profissional?</p>
+        </div>
+
+        <div style="display: flex; gap: 50px; flex-wrap: wrap; justify-content: center;">
+            
+            <div style="flex: 1; min-width: 320px; background: rgba(255, 255, 255, 0.02); padding: 40px; border-radius: 15px; border: 1px solid rgba(138, 43, 226, 0.15);">
+                <form action="#" style="display: flex; flex-direction: column; gap: 20px;">
+                    <input type="text" placeholder="Seu Nome" style="background: #05050a; border: 1px solid #333; padding: 15px; border-radius: 8px; color: white; outline: none;">
+                    <input type="email" placeholder="Seu E-mail" style="background: #05050a; border: 1px solid #333; padding: 15px; border-radius: 8px; color: white; outline: none;">
+                    <textarea placeholder="Sua Mensagem" rows="5" style="background: #05050a; border: 1px solid #333; padding: 15px; border-radius: 8px; color: white; outline: none; resize: none;"></textarea>
+                    <button type="submit" style="background: linear-gradient(90deg, #8a2be2, #00bfff); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s;">Enviar Mensagem 🚀</button>
+                </form>
+            </div>
+
+            <div style="flex: 1; min-width: 320px; display: flex; flex-direction: column; gap: 30px;">
+                <div style="background: rgba(138, 43, 226, 0.05); padding: 30px; border-radius: 15px; border: 1px solid rgba(138, 43, 226, 0.2);">
+                    <h4 style="color: #00bfff; margin-top: 0;">Análise de Dados aplicada ao negócio</h4>
+                    <p style="color: #aaa; font-size: 0.95rem; line-height: 1.6;">Transformo grandes volumes de dados financeiros em dashboards estratégicos e relatórios automatizados. Meu foco é eliminar a complexidade das planilhas, identificando padrões de rentabilidade e tendências que garantem clareza absoluta para sua tomada de decisão e saúde do seu negócio.</p>
+                </div>
+
+                <div style="color: #ccc; font-size: 0.95rem;">
+                    <p><strong>Email:</strong> contatovitoriaoliveira00@gmail.com</p>
+                    <p><strong>Localização:</strong> São Paulo, SP</p>
+                    <div style="margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="https://wa.me/5511969731438" target="_blank" style="color: #00bfff; text-decoration: none; border: 1px solid #333; padding: 10px 20px; border-radius: 50px; font-size: 0.85rem;">WhatsApp</a>
+                        <a href="https://www.linkedin.com/in/vitoriaoliveiram?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" style="color: #00bfff; text-decoration: none; border: 1px solid #333; padding: 10px 20px; border-radius: 50px; font-size: 0.85rem;">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer style="text-align: center; margin-top: 100px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.05); color: #555; font-size: 0.8rem;">
+            &copy; 2024 Vitória Oliveira. Todos os direitos reservados.
+        </footer>
+    </section>
