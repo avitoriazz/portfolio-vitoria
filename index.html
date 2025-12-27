@@ -58,7 +58,6 @@
 
         .contact-info { margin-top: 20px; color: #ccc; font-size: 0.95rem; }
         .contact-info p { margin: 5px 0; }
-        .contact-info span { color: #8a2be2; margin-right: 10px; }
 
         /* Círculo da Foto */
         .hero-img {
@@ -76,10 +75,10 @@
 
         /* Botões e Links Sociais */
         .btn-container { display: flex; gap: 15px; margin-top: 30px; }
-        .btn { padding: 12px 25px; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; font-size: 0.9rem; }
-        .btn-contato { background: linear-gradient(90deg, #8a2be2, #00bfff); color: white; }
+        .btn { padding: 12px 25px; text-decoration: none; border-radius: 50px; font-weight: bold; transition: 0.3s; font-size: 0.9rem; display: inline-block; }
+        .btn-contato { background: linear-gradient(90deg, #8a2be2, #00bfff); color: white; border: none; }
         .btn-cv { border: 2px solid #8a2be2; color: white; }
-        .btn:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(138, 43, 226, 0.4); }
+        .btn:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(138, 43, 226, 0.4); cursor: pointer; }
 
         .social-links { margin-top: 25px; display: flex; gap: 20px; }
         .social-links a { color: #00bfff; text-decoration: none; font-weight: bold; border: 1px solid #1a1a2e; padding: 8px 15px; border-radius: 50%; transition: 0.3s; }
@@ -88,14 +87,14 @@
         /* Grid de Habilidades (Sobre) */
         .skill-card {
             background: rgba(255, 255, 255, 0.02);
-            padding: 30px;
+            padding: 25px;
             border-radius: 15px;
             border: 1px solid rgba(138, 43, 226, 0.15);
             transition: 0.3s;
         }
         .skill-card:hover { border-color: #00bfff; transform: translateY(-5px); }
-        .skill-card h4 { color: #00bfff; margin-bottom: 15px; font-size: 1.2rem; margin-top: 0; }
-        .skill-card ul { color: #aaa; list-style: none; padding: 0; line-height: 1.8; font-size: 0.95rem; margin: 0; }
+        .skill-card h4 { color: #00bfff; margin-bottom: 15px; font-size: 1.1rem; margin-top: 0; }
+        .skill-card ul { color: #aaa; list-style: none; padding: 0; line-height: 1.6; font-size: 0.85rem; margin: 0; }
 
         /* Estilo para os Cards de Projetos */
         .project-card {
@@ -109,11 +108,12 @@
         .project-card:hover { transform: translateY(-10px); border-color: #00bfff; }
         .project-img-placeholder { background: #1a1a2e; height: 180px; display: flex; justify-content: center; align-items: center; font-size: 3rem; }
 
+        /* Responsividade */
         @media (max-width: 900px) {
-            .hero { flex-direction: column-reverse; text-align: center; padding-top: 100px; height: auto; padding-bottom: 50px; }
+            .hero { flex-direction: column-reverse; text-align: center; padding-top: 120px; height: auto; padding-bottom: 50px; }
             .hero-img { width: 250px; height: 250px; }
-            .btn-container { justify-content: center; }
-            .social-links { justify-content: center; }
+            .btn-container, .social-links { justify-content: center; }
+            .contact-flex { flex-direction: column; }
         }
     </style>
 </head>
@@ -159,40 +159,54 @@
     <section id="sobre" style="padding: 100px 10%; background-color: #0a0a12; border-top: 1px solid rgba(138, 43, 226, 0.1);">
         <div style="text-align: center; max-width: 850px; margin: 0 auto 60px auto;">
             <h2 style="font-size: 2.5rem; color: #00bfff; margin-bottom: 20px;">Sobre mim<span>.</span></h2>
-            <p style="font-size: 1.2rem; line-height: 1.8; color: #ccc;">
-                Ajudo empresas a organizar, analisar e visualizar dados para melhorar a tomada de decisão. 
-                Tenho experiência em análise de dados no <strong>setor financeiro</strong>, criando dashboards em <strong>Power BI</strong>, 
-                relatórios estratégicos e análises com <strong>SQL, Excel, Python e Databricks</strong>, 
-                sempre conectando dados ao resultado do negócio.
+            <p style="font-size: 1.1rem; line-height: 1.8; color: #ccc;">
+                Ajudo empresas a organizar, analisar e visualizar dados para melhorar a tomada de decisão. Tenho experiência em análise de dados no <strong>setor financeiro</strong>, criando dashboards em <strong>Power BI</strong>, relatórios estratégicos e análises com <strong>SQL, Excel, Python e Databricks</strong>, sempre conectando dados ao resultado do negócio.
             </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
            <div class="skill-card">
                 <h4>🔹 Análise de Dados</h4>
                 <ul>
-                    <li>• Análise exploratória de dados (EDA)</li>
-                    <li>• Identificação de padrões e tendências</li>
+                    <li>• Análise exploratória (EDA)</li>
+                    <li>• Identificação de padrões</li>
                     <li>• Storytelling com dados</li>
-                    <li>• Análises para produtos financeiros</li>
+                    <li>• Produtos financeiros</li>
                 </ul>
             </div>
             <div class="skill-card">
                 <h4>🔹 Bancos de Dados & SQL</h4>
                 <ul>
-                    <li>• Consultas SQL (SELECT, JOIN, GROUP BY, WHERE)</li>
-                    <li>• Extração e manipulação de dados</li>
-                    <li>• Integração de múltiplas bases</li>
-                    <li>• Apoio a processos de ETL</li>
+                    <li>• Consultas SQL avançadas</li>
+                    <li>• Extração e manipulação</li>
+                    <li>• Integração de bases</li>
+                    <li>• Apoio a processos ETL</li>
                 </ul>
             </div>
             <div class="skill-card">
                 <h4>🔹 Visualização de Dados</h4>
                 <ul>
-                    <li>• Power BI (dashboards interativos)</li>
-                    <li>• Relatórios gerenciais e financeiros</li>
-                    <li>• Data Visualization orientada ao negócio</li>
+                    <li>• Power BI interativo</li>
+                    <li>• Relatórios gerenciais</li>
+                    <li>• Data Viz orientada ao negócio</li>
                     <li>• Apresentações executivas</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h4>🔹 Big Data</h4>
+                <ul>
+                    <li>• Databricks</li>
+                    <li>• Tratamento e integração</li>
+                    <li>• Ambiente distribuído</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h4>🔹 Python & Excel</h4>
+                <ul>
+                    <li>• Automação de análises</li>
+                    <li>• Tabelas dinâmicas e fórmulas</li>
+                    <li>• Manipulação básica de dados</li>
+                    <li>• Organização e padronização</li>
                 </ul>
             </div>
         </div>
@@ -202,8 +216,7 @@
         <h2 style="font-size: 2.5rem; color: #00bfff; margin-bottom: 20px;">Meus Projetos<span>.</span></h2>
         <p style="color: #ccc; margin-bottom: 60px;">Confira alguns dos meus trabalhos recentes em análise de dados e visualização estratégica.</p>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; justify-content: center;">
-            
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             <div class="project-card">
                 <div class="project-img-placeholder">📊</div>
                 <div style="padding: 25px;">
@@ -212,7 +225,6 @@
                     <a href="https://github.com/avitoriazz" target="_blank" style="color: #8a2be2; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Ver Projeto →</a>
                 </div>
             </div>
-
             <div class="project-card">
                 <div class="project-img-placeholder">🐍</div>
                 <div style="padding: 25px;">
@@ -221,24 +233,36 @@
                     <a href="https://github.com/avitoriazz" target="_blank" style="color: #8a2be2; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Ver no GitHub →</a>
                 </div>
             </div>
-
         </div>
     </section>
 
     <section id="contato" style="padding: 100px 10%; background-color: #0a0a12; border-top: 1px solid rgba(138, 43, 226, 0.1);">
         <div style="text-align: center; margin-bottom: 60px;">
             <h2 style="font-size: 2.5rem; color: #00bfff; margin-bottom: 20px;">Contato Profissional<span>.</span></h2>
-            <p style="color: #ccc; max-width: 600px; margin: 0 auto;">Estou à disposição para colaborar em projetos de análise de dados e inteligência de negócio.</p>
+            <p style="color: #ccc; max-width: 800px; margin: 0 auto;">Se você busca transformar os dados do seu negócio em estratégias claras, estou à disposição para ajudar.</p>
         </div>
 
-        <div style="display: flex; gap: 50px; flex-wrap: wrap; justify-content: center;">
-            <div style="flex: 1; min-width: 320px; background: rgba(255, 255, 255, 0.02); padding: 40px; border-radius: 15px; border: 1px solid rgba(138, 43, 226, 0.15);">
+        <div class="contact-flex" style="display: flex; gap: 40px; justify-content: center; align-items: flex-start;">
+            <div style="flex: 1.5; min-width: 320px; background: rgba(255, 255, 255, 0.02); padding: 40px; border-radius: 15px; border: 1px solid rgba(138, 43, 226, 0.15);">
                 <form action="https://formspree.io/f/xykyklnq" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
                     <input type="text" name="name" placeholder="Seu Nome" required style="background: #05050a; border: 1px solid #333; padding: 15px; border-radius: 8px; color: white; outline: none;">
                     <input type="email" name="email" placeholder="Seu E-mail" required style="background: #05050a; border: 1px solid #333; padding: 15px; border-radius: 8px; color: white; outline: none;">
                     <textarea name="message" placeholder="Sua Mensagem" rows="5" required style="background: #05050a; border: 1px solid #333; padding: 15px; border-radius: 8px; color: white; outline: none; resize: none;"></textarea>
-                    <button type="submit" style="background: linear-gradient(90deg, #8a2be2, #00bfff); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s;">Enviar Mensagem 🚀</button>
+                    <button type="submit" class="btn btn-contato">Enviar Mensagem 🚀</button>
                 </form>
+            </div>
+
+            <div style="flex: 1; min-width: 300px; background: rgba(255, 255, 255, 0.02); padding: 30px; border-radius: 15px; border: 1px solid rgba(138, 43, 226, 0.15);">
+                <h4 style="color: #00bfff; margin-top: 0;">Análise de Dados aplicada ao negócio</h4>
+                <p style="color: #aaa; font-size: 0.9rem; line-height: 1.6;">Transformo grandes volumes de dados financeiros em dashboards estratégicos e relatórios automatizados.</p>
+                <div style="margin-top: 25px; font-size: 0.9rem; color: #ccc;">
+                    <p><strong>Email:</strong> contatovitoriaoliveira00@gmail.com</p>
+                    <p><strong>Localização:</strong> São Paulo, SP</p>
+                </div>
+                <div style="margin-top: 20px; display: flex; gap: 15px;">
+                    <a href="https://wa.me/5511969731438" target="_blank" style="color: #00bfff; text-decoration: none; font-size: 0.85rem; border: 1px solid #333; padding: 5px 15px; border-radius: 20px;">WhatsApp</a>
+                    <a href="https://www.linkedin.com/in/vitoriaoliveiram" target="_blank" style="color: #00bfff; text-decoration: none; font-size: 0.85rem; border: 1px solid #333; padding: 5px 15px; border-radius: 20px;">LinkedIn</a>
+                </div>
             </div>
         </div>
     </section>
